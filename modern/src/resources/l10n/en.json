@@ -503,7 +503,7 @@
     "notificatorMail": "Mail",
     "notificatorSms": "SMS",
     "notificatorFirebase": "Firebase",
-    "notificatorTraccar": "Traccar",
+    "notificatorTraccar": "WhatsTrack",
     "notificatorTelegram": "Telegram",
     "notificatorPushover": "Pushover",
     "reportReplay": "Replay",

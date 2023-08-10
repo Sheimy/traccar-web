@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
+
+<properties>
+
+    <entry key='config.default'>./conf/default.xml</entry>
+
+    <!--
+
+    This is the main configuration file. All your configuration parameters should be placed in this file.
+
+    Default configuration parameters are located in the "default.xml" file. You should not modify it to avoid issues
+    with upgrading to a new version. Parameters in the main config file override values in the default file. Do not
+    remove "config.default" parameter from this file unless you know what you are doing.
+
+    For list of available parameters see following page: https://www.traccar.org/configuration-file/
+
+    -->
+
+    <entry key='database.driver'>com.mysql.cj.jdbc.Driver</entry>
+    <entry key='database.url'>jdbc:mysql://localhost/TRACKING?serverTimezone=UTC&amp;allowPublicKeyRetrieval=true&amp;useSSL=false&amp;allowMultiQueries=true&amp;autoReconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;sessionVariables=sql_mode=''</entry>
+    <entry key='database.user'>root</entry>
+    <entry key='database.password'>sheimy</entry>
+    
+    <entry key='forward.enable'>true</entry>
+    <entry key='forward.json'>true</entry>
+    <entry key='forward.type'>json</entry>
+    <entry key='forward.url'>http://localhost:5000</entry>
+    <entry key="event.forward.enable">true</entry>
+    <entry key='event.forward.url'>http://localhost:5000</entry>
+   <entry key='notificator.types'>web,mail,firebase,telegram</entry>
+   <entry key='notificator.firebase.serviceAccount'>
+  {
+  "type": "service_account",
+  "project_id": "tracker-1483978464811",
+  "private_key_id": "bac08a0e6fa824296da9c986f86cf2732b44b3c1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC38t3OojAKC8bR\nLQsphynIzAtYprGd/fLkUMTtKbV3vDHcmgNH1OqxyDPdKy7rec4/RTijnAMMhtZ6\nQvpXsKNLcskbKTIWfOFYWWEvoZSIIUCvlN6z2kuBQxCSTWYYW2CSv1JVyUBRUWnV\nHTaLfsXmL/S1CB77VWawBtSe645mQItEOY9qlekxWP7B0jLsHM6VhSuGD0xLUQn2\njIKdLrPW+kkhjzKLhWHDTTixfxwL/ahKdLaQWMIObNt94/DIVsDTzCsBk4RvxKRz\nc5M67ralWnZ9b0Da3euhoI00J92pFDOxZXI9hbtjUn4+TurHgZlwyt2ePZKw1Uv5\neQiWPPCRAgMBAAECggEAEGvuFp8ECuGM7j+chNM8N7YqN8/UgMua/ib3wvRmRDou\nJAjbzMiFQI8kPNUOFezZ12wmkknrO8MN1/xYElwCjUnCClqzI1l4BJsgwfp6zWxV\nNKzln3Ntf4ICiLfAKuHSzUb8jWFaDJMSuk58ABgL3XDf4l7HOp4f0gx0uXtDSygb\n2FgMAJhDYQ4HnzwtdGL2bYro58NO6ALiuBwyMvHTW8deCsqA1zbkQ6vxOvpXaunI\njdnB4x0XmCO90VW9sXRvDGh+GrlUSMQbenQ2ah6dT1SdA920xPhSROoE+jgUrax5\noQssRmunJiy9bVMTNfGpEiwq3g1o7qSNINtd1PgGwQKBgQDf26YzfNRoRsNzr2rx\nUn+7QBDwr1qm11jsKsvBXEU1VNU24OxDAqHO4kuqhSXiaG3uUKVlOzLsnLsR5fni\nMhmS3Udjb25Z2oS8am7ik8IqFjtSF/pF0q3OFfwhNIxTrX920yhiRPwRwiZBfC6H\nD1uLux53t6MfUiN5+i+zm1BQzwKBgQDSXEU5tn7SL5khelE7RkjTIv0qYuO6MZ2R\nh6iALsRYzus77h5XxezfbT+mI+hn2S66k0MT3Iscn98IYSbGKaG8vqXsiPO8k7cz\n8P7RZZy0jd7kyKJXj27Ojl8lkg4rN/jDvoY4+R/SY2UFPnzHNFGAlxtgFhSpN13C\n00aWxilAnwKBgQC7AIcvfbkGvw5pZoGkxHEVoGhGV4YX189dwkZh6c2axpoydOSI\n+frnk1z4PrAuGWSz70Srcy+QP0F6qy36yjVY3WbUZvK9NvEpYJPuzNYnSFkXtBYL\nG/q7LNxpdLdA86+GONEEfnI/93rzu2Q2yRqFeLPz+EDZWklujRQqKrWGOwKBgQDH\n7OXl+eoCPTaeOLAnU582+1P9CstAVJNaksG0Qb5eYRn0dVTlOrjrh9ssPYhN2n2s\n2PSxVbPo2pCQWDUPtNWAmvj7GxX7LbC6btrfjGEowIUMjxqreShoq6sF/A/3R1To\nRJUwZKS3wbtrBn50nOaw/ewIoDO2t2YnGcFG3sKqJQKBgCFVYk02z9pUoEk/28Km\nefC2KdRJB+7/sr5PBhCf7HOXDcCrkgABIVMZNNX0okt9ZQaeY1IojjRJOjzlkx30\nbZNf8CCXI8R/9GIOoX2Igvh0zcgSYGMwtIodgroITXmCp56oUUBDm3yUKzi1pePI\nuGTM2C/qm/SUIt4YVpb59UE2\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-w3l04@tracker-1483978464811.iam.gserviceaccount.com",
+  "client_id": "108632530195528871101",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-w3l04%40tracker-1483978464811.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}    
+</entry>
+
+</properties>
