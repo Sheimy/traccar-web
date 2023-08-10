@@ -43,6 +43,7 @@ import useQuery from './common/util/useQuery';
 import { useEffectAsync } from './reactHelper';
 import { devicesActions } from './store';
 import EventPage from './other/EventPage';
+import SMSPage from './other/SMSPage';
 import PreferencesPage from './settings/PreferencesPage';
 import AccumulatorsPage from './settings/AccumulatorsPage';
 import CommandDevicePage from './settings/CommandDevicePage';
@@ -84,6 +85,9 @@ const Navigation = () => {
     } else if (query.get('eventId')) {
       const eventId = parseInt(query.get('eventId'), 10);
       navigate(`/event/${eventId}`);
+    } else if (query.get('smsId')) {
+      const eventId = parseInt(query.get('smsId'), 10);
+      navigate(`/sms/${eventId}`);
     } else {
       setRedirectsHandled(true);
     }
@@ -104,6 +108,7 @@ const Navigation = () => {
         <Route path="position/:id" element={<PositionPage />} />
         <Route path="network/:positionId" element={<NetworkPage />} />
         <Route path="event/:id" element={<EventPage />} />
+        <Route path="sms/:id" element={<SMSPage />} />
         <Route path="replay" element={<ReplayPage />} />
         <Route path="geofences" element={<GeofencesPage />} />
 
