@@ -22,6 +22,8 @@
     <entry key='database.url'>jdbc:mysql://localhost/TRACKING?serverTimezone=UTC&amp;allowPublicKeyRetrieval=true&amp;useSSL=false&amp;allowMultiQueries=true&amp;autoReconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;sessionVariables=sql_mode=''</entry>
     <entry key='database.user'>root</entry>
     <entry key='database.password'>sheimy</entry>
+    <entry key='title'>WhatsTrack</entry>
+    <entry key='description'>WhatsTrack GPS Tracking System</entry>
     
     <entry key='forward.enable'>true</entry>
     <entry key='forward.json'>true</entry>
